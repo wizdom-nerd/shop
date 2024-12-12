@@ -1,0 +1,57 @@
+$SF:
+    ("BOLD",700),
+    ("REGULAR",400),
+    ("MEDIUM",500);
+
+@each $name, $weight in $SF{
+    @font-face {
+        font-family: "SF Pro Display";
+        font-weight: $weight ;
+        src: url(../fonts/SFPRODISPLAY#{$name}.OTF);
+    }
+}
+* {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "SF Pro Display", sans-serif;
+    font-weight: 700;
+    
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 88.53%;
+    width: 100%;
+
+}
+
+body {
+    background-color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: white;
+        }
+}
+
+  
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
